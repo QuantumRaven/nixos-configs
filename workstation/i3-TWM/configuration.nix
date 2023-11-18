@@ -119,7 +119,7 @@
   };
 
   # Allow unfree packages
-{  nixpkgs.config.allowUnfree = true; };
+  nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -135,6 +135,7 @@
       helvum
       python312
       ffmpeg
+      podman-compose
       
 ];
 
@@ -150,7 +151,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Firewall Port Management
   networking.firewall.allowedTCPPorts = [ 2000 ];
@@ -209,6 +210,12 @@
   virtualisation.libvirtd.enable = true;
   programs.dconf.enable = true; # virt-manager requires dconf to remember settings
   virtualisation.libvirtd.qemu.runAsRoot = false;
+
+# Containerization - Podman
+
+  # Enable podman
+  virtualisation.podman.enable = true;
+  virtualisation.podman.dockerCompat = true;  
 
 # Tiling Window Manager
 
