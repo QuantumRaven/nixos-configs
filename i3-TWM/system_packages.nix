@@ -32,8 +32,9 @@
       podman-compose
       sshpass
       syncthing
-      wget2
+      wget
       cargo
+      libvirt
 ];
 
   # Enable Version Control System

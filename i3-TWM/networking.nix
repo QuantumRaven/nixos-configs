@@ -3,11 +3,6 @@
 {
 
   networking.hostName = "milkyway"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -19,9 +14,6 @@
    services.openssh.enable = true;
 
    # Firewall Port Management
-   # networking.firewall.allowedTCPPorts = [ ... ];
-   # networking.firewall.allowedUDPPorts = [ ... ];
-   # Or disable the firewall altogether.
    networking.firewall = {
      enable = true;
      allowedTCPPorts = [ 8100 ];
@@ -30,5 +22,10 @@
  };
 
    networking.nftables.enable = true;
+
+   networking.interfaces.eno1.useDHCP = false;
+   networking.bridges.br0 = {
+     interfaces = [ "eno1" ];
+   };
 
 }
