@@ -16,6 +16,9 @@
       # Virtualization - KVM/QEMU
       ./kvm_qemu.nix
 
+      # Nix flakes
+      ./nix_flakes.nix
+
       # Network configuration
       ./networking.nix
 
