@@ -39,6 +39,12 @@
         clifm
         tmux
         mpv
+        telegram-desktop
+        dunst
+        libnotify
+        picom
+        feh
+        xorg.xprop
       ];
   };
 

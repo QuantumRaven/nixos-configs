@@ -16,9 +16,6 @@
       # Virtualization - KVM/QEMU
       ./kvm_qemu.nix
 
-      # Nix flakes
-      ./nix_flakes.nix
-
       # Network configuration
       ./networking.nix
 
@@ -32,7 +29,7 @@
       ./steam.nix
 
       # System packages
-      ./systempackages.nix
+      ./system_packages.nix
 
       # Time configuration
       ./time.nix

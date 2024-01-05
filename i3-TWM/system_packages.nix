@@ -35,6 +35,10 @@
       wget
       cargo
       libvirt
+      openssl
+      tldr
+      black
+      
 ];
 
   # Enable Version Control System
