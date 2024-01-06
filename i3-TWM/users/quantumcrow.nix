@@ -6,6 +6,7 @@
       isNormalUser = true;
       description = "quantumcrow";
       extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+      hashedPassword = "$6$FYJD72vquzMlXPS2$oml7DmGd4o9LGrCJ1.XkZi1pgjJMlQKueSAm0gHjzxSAczicDsytVWYXtJFQTuY.L7fIsMhEvbjhzfO3R3XF5.";
       packages = with pkgs; [
         alacritty
         discord
